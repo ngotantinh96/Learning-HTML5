@@ -67,29 +67,29 @@ label {
   width: 960px;
 }
 
-#header {
+header {
   width: 100%;
   height: 85px;
 }
 
-#header h1 {
+header h1 {
   color: white;
   float: left;
   font-size: 43px;
   padding: 20px 0 0 20px;
 }
 
-#header h1 span.blue-logo {
+header h1 span.blue-logo {
   color: rgb(86, 151, 235);
 }
 
-#header h2 {
+header h2 {
   float: right;
   padding: 40px 20px 0 0;
   color: rgb(128, 189, 230);
 }
 
-#header h2 span.now-sologan {
+header h2 span.now-sologan {
   color: white;
 }
 
@@ -204,4 +204,11 @@ table.dev-table th {
 table.dev-table tr,
 table.dev-table td {
   border-bottom: dashed black 1px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  color: white;
+  background-color: black;
 }
