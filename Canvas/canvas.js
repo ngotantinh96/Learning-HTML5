@@ -1,4 +1,5 @@
 function makeCanvas() {
+  // draw canvas text
   var canvas1 = document.getElementById("canvas1");
   var ctx1 = canvas1.getContext("2d");
 
@@ -8,4 +9,26 @@ function makeCanvas() {
 
   ctx1.fillText("I Love HTML5", 100, 150);
   ctx1.strokeText("I Love HTML5", 100, 150);
+
+  //draw four squares
+  var canvas2 = document.getElementById("canvas2");
+  var ctx2 = canvas2.getContext("2d");
+
+  ctx2.fillStyle = "red";
+  ctx2.strokeStyle = "black";
+  ctx2.lineWidth = 10;
+  ctx2.fillRect(40, 5, 135, 135);
+  ctx2.strokeRect(40, 5, 135, 135);
+
+  ctx2.fillStyle = "gray";
+  ctx2.fillRect(200, 0, 135, 135);
+
+  ctx2.fillStyle = "red";
+  ctx2.strokeStyle = "black";
+  ctx2.lineWidth = 10;
+  ctx2.fillRect(200, 150, 135, 135);
+  ctx2.strokeRect(200, 150, 135, 135);
+
+  ctx2.fillStyle = "gray";
+  ctx2.fillRect(40, 155, 135, 135);
 }
