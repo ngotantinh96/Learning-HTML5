@@ -31,4 +31,23 @@ function makeCanvas() {
 
   ctx2.fillStyle = "gray";
   ctx2.fillRect(40, 155, 135, 135);
+
+  // LINES
+  var canvas3 = document.getElementById("canvas3");
+  var ctx3 = canvas3.getContext("2d");
+
+  ctx3.strokeStyle = "gray";
+  ctx3.fillStyle = "#ff0000";
+  ctx3.lineWidth = 5;
+
+  ctx3.beginPath();
+  ctx3.moveTo(100, 100);
+  ctx3.lineTo(150, 200);
+  ctx3.lineTo(200, 200);
+  ctx3.lineTo(200, 290);
+  ctx3.lineTo(290, 290);
+  ctx3.lineTo(290, 100);
+  ctx3.moveTo(100, 100);
+  ctx3.stroke();
+  ctx3.fill();
 }
