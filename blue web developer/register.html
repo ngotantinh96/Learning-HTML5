@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<title>Blue Developer Directory</title>
+	<style>
+		#map {
+			width: 400px;
+			height: 250px;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<h1><span class="blue-text">Blue</span> Developer Directory</h1>
+			<h2>Find A Developer <span class="white-text">NOW</span></h2>
+		</header>
+
+		<nav id="menu">
+			<ul>
+				<li class="menuitem"><a href="index.html">Home</a></li>
+				<li class="menuitem"><a href="about.html">About Us</a></li>
+				<li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+				<li class="menuitem"><a href="register.html">Register As Developer</a></li>
+				<li class="menuitem"><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<nav id="left-menu">
+			<h3>Links</h3>
+			<ul>
+				<li><a href="browse.html">SEO</a></li>
+				<li><a href="browse.html">PHP</a></li>
+				<li><a href="browse.html">Ajax</a></li>
+				<li><a href="browse.html">jQuery</a></li>
+				<li><a href="browse.html">Web design</a></li>
+				<li><a href="browse.html">Web Programming</a></li>
+				<li><a href="browse.html">Content Creation</a></li>
+				<li><a href="browse.html">Internet Marketing</a></li>
+				<li><a href="browse.html">XHTML Templates</a></li>
+			</ul>
+		</nav>
+
+		<section id="content">
+			<h3>Register As A Developer</h3>
+			<form>
+				<p>
+					<label for="name">First Name:</label>
+					<input type="text" name="first_name">
+				</p>
+				<p>
+					<label for="name">Last Name:</label>
+					<input type="text" name="last_name">
+				</p>
+				<p>
+					<label for="name">Email:</label>
+					<input type="text" name="email">
+				</p>
+				<p>
+					<label for="location">Location:</label>
+					<div id="map"></div>
+				</p>
+				<div style="clear:both;"></div>
+				<p>
+					<input type="submit" value="Register">
+				</p>
+			</form>
+		</section>
+	</div>
+	<!--container end-->
+	<div style="clear:both"></div>
+	<footer>
+		Copyright &copy; 2013, Blue Web Developer Directory
+	</footer>
+	<script>
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			alert("Geolocation is not supported by this browser.");
+		}
+
+		function showPosition(position) {
+			var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+			var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyDLFENka8Lxd4BGKabFTrICeGgWId7sL4s";
+
+			document.getElementById("map").innerHTML = "<img src='" + img_url + "'>";
+		}
+	</script>
+</body>
+
+</html>
