@@ -54,6 +54,17 @@
           HTML5, XHTML and XML to programming languages such as Javascript, PHP,
           Python and ASP
         </p>
+
+        <video id="ad" width="500" height="350" controls>
+          <source src="./video/ad.mp4" type="video/mp4" />
+          Please update your browser
+        </video>
+        <div style="width:400px">
+          <button onclick="playPause()">Play/Pause</button>
+          <button onclick="makeSmall()">Make Small</button>
+          <button onclick="makeNormal()">Make Normal</button>
+          <button onclick="makeBig()">Make Big</button>
+        </div>
       </section>
       <!--content end-->
     </div>
@@ -62,5 +73,30 @@
     <footer>
       Copyright 2019, Blue Developer Directory
     </footer>
+    <script>
+      var video = document.getElementById("ad");
+      function playPause() {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+      
+      function makeSmall() {
+        video.width = 250;
+        video.height = 150;
+      }
+
+      function makeNormal() {
+        video.width = 500;
+        video.height = 350;
+      }
+
+      function makeBig() {
+        video.width = 650;
+        video.height = 400;
+      }
+    </script>
   </body>
 </html>
