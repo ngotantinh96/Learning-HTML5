@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag And Drop</title>
+    <style type="text/css">
+      #div1 {
+        width: 240px;
+        height: 240px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+        float: left;
+      }
+
+      #div2 {
+        width: 240px;
+        height: 240px;
+        padding: 10px;
+        border: 1px solid red;
+        float: left;
+      }
+      #drag1 {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Drag the HTML5 Logo To The Box</h1>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br />
+    <img
+      id="drag1"
+      src="html5.jpg"
+      draggable="true"
+      ondragstart="drag(event)"
+    />
+
+    <script>
+      function allowDrop(e) {
+        e.preventDefault();
+      }
+
+      function drop(e) {
+        e.preventDefault();
+        var data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+      }
+
+      function drag(e) {
+        e.dataTransfer.setData("text", e.target.id);
+      }
+    </script>
+  </body>
+</html>
